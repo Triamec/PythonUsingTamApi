@@ -14,36 +14,41 @@ from Triamec.TriaLink import DeviceState
 from Triamec.TriaLink.Adapter import DataLinkLayers
 from Triamec.Tam.Acquisitions import TamAcquisitionExtensions
 
+# Create the root object representing the topology ot the TAM hardware.
+# Note that we must dispose this object at the end in ordfer to clean up resources.
 topo = TamTopology(None)
 try:
     topo.AddLocalTamSystem(None)
 except Exception as e:
     CommonExtensions.FullMessage(e)
 
+# Connect the drive / get system
 tamSystem = topo.Systems[0]
 try:
     tamSystem.Identify()
 except Exception as e:
     CommonExtensions.FullMessage(e)
 
+# Set the axis name the example works with.
 axis_name = 'Axis 0'
 
 # This code looks weird since we need to specify all extension methods and generic arguments explicitly.
 # In C#, we could express this as
 # var axis = topology.AsDepthFirstLeaves<TamAxis>().FirstOrDefault(a => a.Name == name);
+# Get the axis with the predefined name
 axis = Enumerable.FirstOrDefault[TamAxis](TamEnumerable.AsDepthFirstLeaves[TamAxis](topo), Func[TamAxis, bool](lambda a : a.Name == axis_name))
 
-# read arbitrary registers
+# Read arbitrary registers
 state = axis.Register.Signals.General.AxisState.Read()
 print(axis_name + ': ' + state.ToString())
 
-# given axis, a TamAxis object
-posReg = axis.Register.Signals.General.PowerStageTemperature
+# Create aquisiton variable for master position and aquire data
+posReg = axis.Register.Signals.PositionController.MasterPosition
 posVar = TamAcquisitionExtensions.CreateVariable(posReg)
-duration = TimeSpan.FromSeconds(2)
+duration = TimeSpan.FromSeconds(1)
 TamAcquisitionExtensions.Acquire(posVar,duration)
 result = list(posVar)
 print('acquired ' + str(len(result)) + ' samples')
 
-# Release resources
+# Clean up resources
 topo.Dispose()
