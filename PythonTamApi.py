@@ -15,7 +15,7 @@ from Triamec.TriaLink.Adapter import DataLinkLayers
 from Triamec.Tam.Acquisitions import TamAcquisitionExtensions
 
 # Create the root object representing the topology ot the TAM hardware.
-# Note that we must dispose this object at the end in ordfer to clean up resources.
+# Note that we must dispose this object at the end in order to clean up resources.
 topo = TamTopology(None)
 try:
     topo.AddLocalTamSystem(None)
@@ -25,6 +25,7 @@ except Exception as e:
 # Connect the drive / get system
 tamSystem = topo.Systems[0]
 try:
+    # Boot the Tria-Link so that it learns about connected stations.
     tamSystem.Identify()
 except Exception as e:
     CommonExtensions.FullMessage(e)
@@ -38,7 +39,7 @@ axis_name = 'Axis 0'
 # Get the axis with the predefined name
 axis = Enumerable.FirstOrDefault[TamAxis](TamEnumerable.AsDepthFirstLeaves[TamAxis](topo), Func[TamAxis, bool](lambda a : a.Name == axis_name))
 
-# Read arbitrary registers
+# Read arbitrary registers (e.g. Axis state)
 state = axis.Register.Signals.General.AxisState.Read()
 print(axis_name + ': ' + state.ToString())
 
