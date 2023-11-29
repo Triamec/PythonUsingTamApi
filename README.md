@@ -8,8 +8,10 @@ It allows Python code to interact with the CLR respectivelly with the TAM API.
 
 The example shows how the TAM API can be integrated into Python. Using the API, it is then possible to read arbitrary registers or record data from a register.
 The following parameters may need to be adapted to your application:
-- Path to the TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
-- Name of the axis `axis_name = 'Axis 0'`
+- Path to the TAM SDK
+  `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
+- Name of the axis
+  `axis_name = 'Axis 0'`
 
 ## Hardware Prerequisites
 - Connection to the drive by *Tria-Link* (via PCI adapter), *USB* or *Ethernet*
