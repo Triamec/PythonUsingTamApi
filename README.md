@@ -15,12 +15,12 @@ It allows Python code to interact with the CLR respectivelly with the TAM API.
 - [Python.NET](https://pypi.org/project/pythonnet/) installed
 
 ## Getting Started
-The example shows how the TAM API can be integrated into Python. Using the API, it is then possible to read arbitrary registers or record data.
-Before you run the Python code, the following parameters may need to be adapted to your application:
+The example shows how the TAM API can be integrated into Python and reading a register or recording data.
+Before you run the example code, the following parameters may need to be adapted to your application:
 - Path and version of TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
 - Name of the axis `axis_name = 'Axis 0'`
 
-## Example tested with
+## Tested with
 - Python **3.11.4**
 - TAM SDK **7.24.1**
 - pythonnet **3.0.3**
