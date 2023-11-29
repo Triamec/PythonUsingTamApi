@@ -20,7 +20,7 @@ Before you run the Python code, the following parameters may need to be adapted 
 - Path and version of TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
 - Name of the axis `axis_name = 'Axis 0'`
 
-## Example is tested with
+## Example tested with
 - Python **3.11.4**
 - TAM SDK **7.24.1**
 - pythonnet **3.0.3**
