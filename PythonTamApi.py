@@ -43,7 +43,7 @@ axis = Enumerable.FirstOrDefault[TamAxis](TamEnumerable.AsDepthFirstLeaves[TamAx
 state = axis.Register.Signals.General.AxisState.Read()
 print(axis_name + ': ' + state.ToString())
 
-# Create aquisiton variable for master position and aquire data
+# Create aquisiton variable for master position, configure and aquire data
 posReg = axis.Register.Signals.PositionController.MasterPosition
 posVar = TamAcquisitionExtensions.CreateVariable(posReg)
 duration = TimeSpan.FromSeconds(1)
