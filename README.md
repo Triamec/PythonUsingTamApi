@@ -15,14 +15,14 @@ The following parameters may need to be adapted to your application:
 - Connection to the drive by *Tria-Link* (via PCI adapter), *USB* or *Ethernet*
 
 ## Software Prerequisites
-- TAM API (comes along with the TAM System Explorer)
+- TAM API available (comes along with the *TAM System Explorer*)
 - Make sure that Python is installed on your system
 - [Python.NET](https://pypi.org/project/pythonnet/) installed
 
 ## Getting Started
 The example shows how the TAM API can be integrated into Python. Using the API, it is then possible to read arbitrary registers or record data.
 Before you run the Python code, the following parameters may need to be adapted to your application:
-- Path to and version of TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
+- Path and version of TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
 - Name of the axis `axis_name = 'Axis 0'`
 
 ## Example is tested with
