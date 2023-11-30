@@ -21,6 +21,7 @@ Before you run the example code, the following parameters may need to be adapted
 - Name of the axis `axis_name = 'Axis 0'`
 
 ## Tested with
+- Windows
 - Python **3.11.4**
 - TAM SDK **7.24.1**
 - pythonnet **3.0.3**
