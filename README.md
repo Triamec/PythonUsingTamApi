@@ -10,6 +10,7 @@ It allows Python code to interact with the CLR respectivelly with the TAM API.
 - Connection to the drive by *Tria-Link* (via PCI adapter), *USB* or *Ethernet*
 
 ## Software Prerequisites
+- Windows OS
 - TAM API available (comes along with the *TAM System Explorer*)
 - Make sure that Python is installed on your system
 - [Python.NET](https://pypi.org/project/pythonnet/) installed
@@ -21,7 +22,7 @@ Before you run the example code, the following parameters may need to be adapted
 - Name of the axis `axis_name = 'Axis 0'`
 
 ## Tested with
-- Windows
+- Windows 11
 - Python **3.11.4**
 - TAM SDK **7.24.1**
 - pythonnet **3.0.3**
