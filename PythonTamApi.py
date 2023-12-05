@@ -14,7 +14,7 @@ from Triamec.TriaLink import DeviceState
 from Triamec.TriaLink.Adapter import DataLinkLayers
 from Triamec.Tam.Acquisitions import TamAcquisitionExtensions
 
-# Create the root object representing the topology ot the TAM hardware.
+# Create the root object representing the topology of the TAM hardware.
 # Note that we must dispose this object at the end in order to clean up resources.
 topo = TamTopology(None)
 try:
@@ -43,7 +43,7 @@ axis = Enumerable.FirstOrDefault[TamAxis](TamEnumerable.AsDepthFirstLeaves[TamAx
 state = axis.Register.Signals.General.AxisState.Read()
 print(axis_name + ': ' + state.ToString())
 
-# Create aquisiton variable for master position, configure and aquire data
+# Create acquisition variable for master position, configure and acquire data
 posReg = axis.Register.Signals.PositionController.MasterPosition
 posVar = TamAcquisitionExtensions.CreateVariable(posReg)
 duration = TimeSpan.FromSeconds(1)
