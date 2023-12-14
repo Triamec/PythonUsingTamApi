@@ -18,7 +18,7 @@ It allows Python code to interact with the CLR respectivelly with the TAM API.
 ## Getting Started
 The example shows how the TAM API can be integrated into Python and reading a register or recording data.
 Before you run the example code, the following parameters may need to be adapted to your application:
-- Path and version of TAM SDK `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
+- Path and version of the TAM Software `TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.24.1', 'SDK')`
 - Name of the axis `axis_name = 'Axis 0'`
 
 ## Tested with
