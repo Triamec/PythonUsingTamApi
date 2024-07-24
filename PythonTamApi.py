@@ -8,6 +8,9 @@ TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.26.0
 clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'Triamec.Common.dll'))
 clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'Tam.dll'))
 
+# These references need to be added in order to circumvent binding failures
+clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'System.Memory'))
+
 from Triamec.Tam import TamEnumerable, TamAxis, TamTopology
 from Triamec import CommonExtensions
 from Triamec.TriaLink import DeviceState
