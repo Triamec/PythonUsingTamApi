@@ -10,6 +10,7 @@ clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'Tam.dll'))
 
 # These references need to be added in order to circumvent binding failures
 clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'System.Memory'))
+clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'System.Runtime.CompilerServices.Unsafe.dll'))
 
 from Triamec.Tam import TamEnumerable, TamAxis, TamTopology
 from Triamec import CommonExtensions
