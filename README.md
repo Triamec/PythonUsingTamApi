@@ -4,7 +4,7 @@
 
 This example demonstrates the use of the TAM API with Python.
 With the installation of the [Python.NET package](https://pypi.org/project/pythonnet/), Python programmers have an almost seamless integration with the .NET Common Language Runtime (CLR).
-It allows Python code to interact with the CLR respectivelly with the TAM API.
+It allows Python code to interact with the CLR respectively with the TAM API.
 
 ## Hardware Prerequisites
 - Connection to the drive by *Tria-Link* (via PCI adapter), *USB* or *Ethernet*
