@@ -24,5 +24,5 @@ Before you run the example code, the following parameters may need to be adapted
 ## Tested with
 - Windows 11
 - Python **3.11.4**
-- TAM SDK **7.26.1**
+- TAM Software **7.26.1**
 - pythonnet **3.0.3**
