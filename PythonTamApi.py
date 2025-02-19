@@ -3,7 +3,7 @@ from os import environ, path
 from System import Exception, Enum, Func, TimeSpan
 from System.Linq import Enumerable
 
-TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.27.0', 'SDK')
+TAM_SOFTWARE_PATH = path.join(environ['ProgramFiles'], 'Triamec', 'Tam', '7.28.0', 'SDK')
 
 clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'Triamec.Common.dll'))
 clr.AddReference(path.join(TAM_SOFTWARE_PATH, 'Tam.dll'))
